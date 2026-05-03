@@ -28,14 +28,10 @@
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
-
 </div>
-
-
-
 <!-- Social connections -->
 <div align="center">
-
+  
 ## 🌐 Connect with Me 🍬
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/6ME9TDt)
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/technologyhell)
@@ -46,7 +42,8 @@
 </div>
 <!-- Snake Animation -->
 <div align="center">
-  ![snake gif](https://github.com/TechnologyHell/TechnologyHell/blob/output/github-snake-dark.svg)
+  
+  ![snake gif](https://github.com/AbdulWahabXVI/AbdulWahabXVI/blob/output/github-snake-dark.svg)
 </div>
 <!-- Visit Counter -->
 <div align="center">
