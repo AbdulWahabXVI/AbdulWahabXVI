@@ -13,22 +13,30 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Generate UI bar
+      - name: Install dependencies
+        run: npm install axios
+
+      - name: Run generator
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
         run: node generate-languages.js
 
-      - name: Commit result
+      - name: Show output (debug)
+        run: ls -R output
+
+      - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add output/languages.svg
-          git commit -m "update language UI" || echo "no changes"
+          git commit -m "update language bar" || echo "no changes"
           git push
