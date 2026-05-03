@@ -14,11 +14,38 @@
 <div align="center">
   <div>Socials</div>
   <br>
-  <img src="https://raw.githubusercontent.com/offensive-vk/Icons/master/cplusplus/cplusplus-line.svg" width="30" height="30" style="pointer-events: none;" />
-  <img src="https://raw.githubusercontent.com/offensive-vk/Icons/master/csharp/csharp-line.svg" width="30" height="30" style="pointer-events: none;" />
-  <img src="https://raw.githubusercontent.com/offensive-vk/Icons/master/python/python-line.svg" width="30" height="30" style="pointer-events: none;" />
-  <img src="https://raw.githubusercontent.com/offensive-vk/Icons/master/cplusplus/cplusplus-line.svg" width="30" height="30" style="pointer-events: none;" />
-  <img src="https://raw.githubusercontent.com/offensive-vk/Icons/master/cplusplus/cplusplus-line.svg" width="30" height="30" style="pointer-events: none;" />
+  <!-- C++ -->
+  <div class="row">
+    <img class="icon"
+      src="https://raw.githubusercontent.com/offensive-vk/Icons/master/cplusplus/cplusplus-line.svg"
+      alt="C++">
+    <div class="name">C++</div>
+    <div class="bar-bg">
+      <div class="bar-fill" style="width: 70%;"></div>
+    </div>
+  </div>
+
+  <!-- Python -->
+  <div class="row">
+    <img class="icon"
+      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+      alt="Python">
+    <div class="name">Python</div>
+    <div class="bar-bg">
+      <div class="bar-fill" style="width: 50%;"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <div class="row">
+    <img class="icon"
+      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+      alt="JS">
+    <div class="name">JavaScript</div>
+    <div class="bar-bg">
+      <div class="bar-fill" style="width: 85%;"></div>
+    </div>
+  </div>
 </div>
 
 
