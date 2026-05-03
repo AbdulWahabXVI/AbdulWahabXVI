@@ -1,23 +1,19 @@
 <div align="center">
 
-## Abdul Wahab
+![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AbdulWahabXVI&theme=github_dark)
 
-[![Discord](https://img.shields.io/badge/Discord-111.svg?style=for-the-badge&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/6ME9TDt)
-[![Instagram](https://img.shields.io/badge/Instagram-111.svg?style=for-the-badge&logo=Instagram&logoColor=white&color=C32AA3)](https://instagram.com/technologyhell)
+[![Discord](https://img.shields.io/badge/Discord-111.svg?style=for-the-badge&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/_abdulwahabxvi_)
+[![Instagram](https://img.shields.io/badge/Instagram-111.svg?style=for-the-badge&logo=Instagram&logoColor=white&color=C32AA3)](https://instagram.com/abdulwahabxvi)
 [![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-111?style=for-the-badge&logo=linkedin-white&logoColor=fff&color=007bb6)](https://linkedin.com/in/abdulwahabxvi)
-[![X](https://img.shields.io/badge/X-111.svg?style=for-the-badge&logo=X&logoColor=white&color=000)](https://x.com/technologyhell)
+[![X](https://img.shields.io/badge/X-111.svg?style=for-the-badge&logo=X&logoColor=white&color=000)](https://x.com/abdulwahabxvi)
 
-</div>
-
----
 
 <div align="center">
-  
-## Statistics
 
-![Pranesh's GitHub stats](https://github-readme-stats-fast.vercel.app/api/top-langs/?username=AbdulWahabXVI&size_weight=1&count_weight=1&theme=cobalt&langs_count=8&layout=donut)
-
----
+![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AbdulWahabXVI&theme=github_dark)
+![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AbdulWahabXVI&theme=github_dark)
+![](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=AbdulWahabXVI&theme=github_dark)
+![](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=AbdulWahabXVI&theme=github_dark&utcOffset=5)
 
 <div align="center">
 
