@@ -3,7 +3,8 @@ const fs = require("fs");
 
 const USERNAME = process.env.GITHUB_USERNAME;
 
-// simple color map (flat, no gradients)
+/* ---------- CONFIG ---------- */
+
 const COLORS = {
   JavaScript: "#f1e05a",
   Python: "#3572A5",
@@ -14,7 +15,6 @@ const COLORS = {
   TypeScript: "#3178c6"
 };
 
-// logo mapping (offensive-vk icons)
 const ICONS = {
   JavaScript:
     "https://raw.githubusercontent.com/offensive-vk/Icons/master/javascript/javascript-line.svg",
@@ -27,8 +27,22 @@ const ICONS = {
   HTML:
     "https://raw.githubusercontent.com/offensive-vk/Icons/master/html/html-line.svg",
   CSS:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/css/css-line.svg"
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/css/css-line.svg",
+  TypeScript:
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/typescript/typescript-line.svg"
 };
+
+/* ---------- NORMALIZE ---------- */
+
+function normalize(lang) {
+  const map = {
+    "C++": "Cpp",
+    "C#": "Csharp"
+  };
+  return map[lang] || lang;
+}
+
+/* ---------- FETCH ---------- */
 
 async function getRepos() {
   const res = await axios.get(
@@ -42,16 +56,21 @@ async function getLang(url) {
   return res.data;
 }
 
+/* ---------- MAIN ---------- */
+
 async function main() {
   const repos = await getRepos();
 
   const totals = {};
 
   for (const repo of repos) {
+    if (!repo.languages_url) continue;
+
     const langs = await getLang(repo.languages_url);
 
     for (const [lang, val] of Object.entries(langs)) {
-      totals[lang] = (totals[lang] || 0) + val;
+      const key = normalize(lang);
+      totals[key] = (totals[key] || 0) + val;
     }
   }
 
@@ -59,47 +78,54 @@ async function main() {
     .sort((a, b) => b[1] - a[1])
     .slice(0, 6);
 
-  const max = sorted[0][1];
+  const max = sorted[0]?.[1] || 1;
 
   let svg = "";
 
   sorted.forEach(([lang, val], i) => {
-    const width = (val / max) * 260;
+    const width = (val / max) * 240;
 
     svg += `
-    <g transform="translate(0,${i * 30})">
+<g transform="translate(0,${i * 32})">
 
-      <!-- icon -->
-      <image href="${ICONS[lang] || ""}"
-             x="10" y="10"
-             width="16" height="16" />
+  <!-- icon -->
+  <image href="${ICONS[lang] || ""}"
+         x="10" y="10"
+         width="16" height="16"
+         style="pointer-events:none;" />
 
-      <!-- name -->
-      <text x="35" y="22"
-            fill="#e5e7eb"
-            font-size="12">
-        ${lang}
-      </text>
+  <!-- name -->
+  <text x="35" y="22"
+        fill="#e5e7eb"
+        font-size="12">
+    ${lang}
+  </text>
 
-      <!-- background bar -->
-      <rect x="120" y="12"
-            width="260" height="8"
-            rx="4"
-            fill="#1f2937" />
+  <!-- background -->
+  <rect x="120" y="12"
+        width="240" height="6"
+        rx="3"
+        fill="#1f2937" />
 
-      <!-- value bar -->
-      <rect x="120" y="12"
-            width="${width}"
-            height="8"
-            rx="4"
-            fill="${COLORS[lang] || "#888"}" />
+  <!-- fill -->
+  <rect x="120" y="12"
+        width="${width}"
+        height="6"
+        rx="3"
+        fill="${COLORS[lang] || "#888"}" />
 
-    </g>`;
+</g>
+`;
   });
 
   const finalSVG = `
-<svg width="420" height="200" xmlns="http://www.w3.org/2000/svg">
+<svg width="420" height="220" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="#0b0f19"/>
+
+  <text x="10" y="20" fill="#9ca3af" font-size="12">
+    Languages I use
+  </text>
+
   ${svg}
 </svg>
 `;
