@@ -17,19 +17,19 @@ const COLORS = {
 
 const ICONS = {
   JavaScript:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/javascript/javascript-line.svg",
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/javascript/javascript-original.svg",
   Python:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/python/python-line.svg",
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/python/python-original.svg",
   Cpp:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/cplusplus/cplusplus-line.svg",
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/cplusplus/cplusplus-original.svg",
   Java:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/java/java-line.svg",
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/java/java-original.svg",
   HTML:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/html/html-line.svg",
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/html/html-original.svg",
   CSS:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/css/css-line.svg",
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/css/css-original.svg",
   TypeScript:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/typescript/typescript-line.svg"
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/typescript/typescript-original.svg"
 };
 
 /* ---------- NORMALIZE ---------- */
