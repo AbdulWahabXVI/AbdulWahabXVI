@@ -3,12 +3,14 @@ on:
   schedule:
   - cron: "0 */12 * * *"
   workflow_dispatch:
-  
+permissions:
+  contents: write   # 🔴 REQUIRED (this is likely your error)
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Generate pacman graph
         uses: Platane/snk@v3
         with:
