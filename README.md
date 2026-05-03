@@ -2,6 +2,15 @@
   
 ## Abdul Wahab
 
+<div align="center">
+  
+[![Discord](https://img.shields.io/badge/Discord-111.svg?style=for-the-badge&&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/6ME9TDt)
+[![Instagram](https://img.shields.io/badge/Instagram-111.svg?style=for-the-badge&logo=Instagram&logoColor=white&color=C32AA3)](https://instagram.com/technologyhell)
+[![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-111?style=for-the-badge&logo=linkedin-white&logoColor=fff&color=007bb6)](https://linkedin.com/in/abdulwahabxvi)
+[![X](https://img.shields.io/badge/X-111.svg?style=for-the-badge&logo=X&logoColor=white&color=000)](https://x.com/technologyhell)
+
+<div align="center">
+  
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -24,13 +33,6 @@
 ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
 </div>
 
-<div align="center">
-  
-## Socials
-[![Discord](https://img.shields.io/badge/Discord-111.svg?style=for-the-badge&&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/6ME9TDt)
-[![Instagram](https://img.shields.io/badge/Instagram-111.svg?style=for-the-badge&logo=Instagram&logoColor=white&color=C32AA3)](https://instagram.com/technologyhell)
-[![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-111?style=for-the-badge&logo=linkedin-white&logoColor=fff&color=007bb6)](https://linkedin.com/in/abdulwahabxvi)
-[![X](https://img.shields.io/badge/X-111.svg?style=for-the-badge&logo=X&logoColor=white&color=000)](https://x.com/technologyhell)
 </div>
 
 <div align="center">
@@ -42,3 +44,5 @@
   
   [![](https://visitcount.itsvg.in/api?id=technologyhell&icon=10&color=6)](https://visitcount.itsvg.in)
 </div>
+
+![](./profile-3d-contrib/profile-night-green.svg)
