@@ -1,6 +1,6 @@
 <div align="center">
 
-![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AbdulWahabXVI&theme=github_dark)
+![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AbdulWahabXVI&theme=tokyonight)
 
 [![Discord](https://img.shields.io/badge/Discord-111.svg?style=for-the-badge&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/_abdulwahabxvi_)
 [![Instagram](https://img.shields.io/badge/Instagram-111.svg?style=for-the-badge&logo=Instagram&logoColor=white&color=C32AA3)](https://instagram.com/abdulwahabxvi)
@@ -10,10 +10,10 @@
 
 <div align="center">
 
-![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AbdulWahabXVI&theme=github_dark)
-![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AbdulWahabXVI&theme=github_dark)
-![](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=AbdulWahabXVI&theme=github_dark)
-![](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=AbdulWahabXVI&theme=github_dark&utcOffset=5)
+![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AbdulWahabXVI&theme=tokyonight)
+![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AbdulWahabXVI&theme=tokyonight)
+![](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=AbdulWahabXVI&theme=tokyonight)
+![](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=AbdulWahabXVI&theme=tokyonight&utcOffset=5)
 
 <div align="center">
 
