@@ -1,11 +1,16 @@
-name: Test Workflow
+name: Language Widget
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
@@ -14,6 +19,16 @@ jobs:
         with:
           node-version: 20
 
-      - run: node -v
+      - run: npm install axios
 
-      - run: echo "Workflow is working"
+      - run: node generate.js
+        env:
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+
+      - name: Commit output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/lang.svg
+          git commit -m "update language widget" || echo "no changes"
+          git push
