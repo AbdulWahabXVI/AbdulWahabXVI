@@ -27,10 +27,10 @@
 <div align="center">
   
 ## Connect with Me
-[![Discord](https://img.shields.io/badge/Discord-111?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/6ME9TDt)
-[![Instagram](https://img.shields.io/badge/Facebook-111?style=for-the-badge&logo=facebook&logoColor=white)](https://instagram.com/technologyhell)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-111?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/abdulwahabxvi)
-[![X](https://img.shields.io/badge/X-111?style=for-the-badge&logo=x&logoColor=white)](https://x.com/technologyhell)
+[![Discord](https://img.shields.io/badge/Discord-111.svg?style=for-the-badge&&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/6ME9TDt)
+[![Instagram](https://img.shields.io/badge/Instagram-111.svg?style=for-the-badge&logo=Instagram&logoColor=white&color=C32AA3)](https://instagram.com/technologyhell)
+[![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-111?style=for-the-badge&logo=linkedin-white&logoColor=fff&color=007bb6)](https://linkedin.com/in/abdulwahabxvi)
+[![X](https://img.shields.io/badge/X-111.svg?style=for-the-badge&logo=X&logoColor=white&color=000)](https://x.com/technologyhell)
 </div>
 
 <div align="center">
