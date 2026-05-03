@@ -9,14 +9,13 @@ jobs:
 build:
 runs-on: ubuntu-latest
 
-```
 steps:
   - uses: actions/checkout@v3
 
   - name: Generate pacman graph
     uses: Platane/snk@v3
     with:
-      github_user_name: YOUR_USERNAME
+      github_user_name: AbdulWahabXVI
       outputs: |
         output/pacman-contribution-graph.svg
 
@@ -27,4 +26,3 @@ steps:
       build_dir: output
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
