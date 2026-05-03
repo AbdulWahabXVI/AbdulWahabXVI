@@ -13,13 +13,13 @@
 
 <div align="center">
   
-## Languages
+## Statistics
 
 ![GitHub Streak](https://streak-stats.demolab.com/?user=DenverCoder1&theme=radical)
 
 ![Pranesh's GitHub stats](https://github-readme-stats-fast.vercel.app/api?username=AbdulWahabXVI&show_icons=true&theme=radical&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
 
-
+![Top Langs](https://github-readme-stats-fast.vercel.app/api/top-langs/?username=AbdulWahabXVI&size_weight=1&count_weight=1&theme=radical&langs_count=8&layout=donut)
 
 ---
 
