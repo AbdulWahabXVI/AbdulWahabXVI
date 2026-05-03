@@ -15,6 +15,7 @@
   <div>Socials</div>
   <br>
   
+  ![Languages](./output/languages-bar.svg)
 <p style="display: inline-block;" align="center">
    <kbd>
     <kbd>Back-end</kbd>
