@@ -17,3 +17,4 @@
 ---
 
 > Keep coding. Keep consuming dots.
+<img src="https://raw.githubusercontent.com/AbdulWahabXVI/AbdulWahabXVI/output/pacman-contribution-graph.svg">
