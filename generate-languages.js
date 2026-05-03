@@ -2,35 +2,44 @@ const axios = require("axios");
 const fs = require("fs");
 
 const USERNAME = process.env.GITHUB_USERNAME;
-const TOKEN = process.env.GITHUB_TOKEN;
+
+// simple color map (flat, no gradients)
+const COLORS = {
+  JavaScript: "#f1e05a",
+  Python: "#3572A5",
+  Cpp: "#f34b7d",
+  Java: "#b07219",
+  HTML: "#e34c26",
+  CSS: "#563d7c",
+  TypeScript: "#3178c6"
+};
+
+// logo mapping (offensive-vk icons)
+const ICONS = {
+  JavaScript:
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/javascript/javascript-line.svg",
+  Python:
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/python/python-line.svg",
+  Cpp:
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/cplusplus/cplusplus-line.svg",
+  Java:
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/java/java-line.svg",
+  HTML:
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/html/html-line.svg",
+  CSS:
+    "https://raw.githubusercontent.com/offensive-vk/Icons/master/css/css-line.svg"
+};
 
 async function getRepos() {
   const res = await axios.get(
-    `https://api.github.com/users/${USERNAME}/repos?per_page=100`,
-    {
-      headers: { Authorization: `token ${TOKEN}` }
-    }
+    `https://api.github.com/users/${USERNAME}/repos?per_page=100`
   );
   return res.data;
 }
 
-async function getLanguages(repo) {
-  const res = await axios.get(repo.languages_url, {
-    headers: { Authorization: `token ${TOKEN}` }
-  });
+async function getLang(url) {
+  const res = await axios.get(url);
   return res.data;
-}
-
-function percentify(data) {
-  const total = Object.values(data).reduce((a, b) => a + b, 0);
-
-  return Object.entries(data)
-    .map(([lang, val]) => ({
-      lang,
-      pct: val / total
-    }))
-    .sort((a, b) => b.pct - a.pct)
-    .slice(0, 6);
 }
 
 async function main() {
@@ -39,54 +48,64 @@ async function main() {
   const totals = {};
 
   for (const repo of repos) {
-    const langs = await getLanguages(repo);
+    const langs = await getLang(repo.languages_url);
 
-    for (const [lang, bytes] of Object.entries(langs)) {
-      totals[lang] = (totals[lang] || 0) + bytes;
+    for (const [lang, val] of Object.entries(langs)) {
+      totals[lang] = (totals[lang] || 0) + val;
     }
   }
 
-  const data = percentify(totals);
+  const sorted = Object.entries(totals)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 6);
 
-  const width = 600;
-  const height = 220;
+  const max = sorted[0][1];
 
-  let bars = "";
+  let svg = "";
 
-  data.forEach((d, i) => {
-    const y = 30 + i * 30;
-    const barWidth = 400 * d.pct;
+  sorted.forEach(([lang, val], i) => {
+    const width = (val / max) * 260;
 
-    // background track
-    bars += `
-      <rect x="160" y="${y - 10}" width="400" height="10" rx="5" fill="#1f2937"/>
-      
-      <rect x="160" y="${y - 10}" width="${barWidth}" height="10" rx="5"
-        fill="url(#grad)" />
+    svg += `
+    <g transform="translate(0,${i * 30})">
 
-      <text x="20" y="${y}" fill="#e5e7eb" font-size="12">
-        ${d.lang}
+      <!-- icon -->
+      <image href="${ICONS[lang] || ""}"
+             x="10" y="10"
+             width="16" height="16" />
+
+      <!-- name -->
+      <text x="35" y="22"
+            fill="#e5e7eb"
+            font-size="12">
+        ${lang}
       </text>
-    `;
+
+      <!-- background bar -->
+      <rect x="120" y="12"
+            width="260" height="8"
+            rx="4"
+            fill="#1f2937" />
+
+      <!-- value bar -->
+      <rect x="120" y="12"
+            width="${width}"
+            height="8"
+            rx="4"
+            fill="${COLORS[lang] || "#888"}" />
+
+    </g>`;
   });
 
-  const svg = `
-<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="grad">
-      <stop offset="0%" stop-color="#22c55e"/>
-      <stop offset="100%" stop-color="#06b6d4"/>
-    </linearGradient>
-  </defs>
-
+  const finalSVG = `
+<svg width="420" height="200" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="#0b0f19"/>
-
-  ${bars}
+  ${svg}
 </svg>
-  `;
+`;
 
   fs.mkdirSync("output", { recursive: true });
-  fs.writeFileSync("output/languages.svg", svg);
+  fs.writeFileSync("output/lang.svg", finalSVG);
 }
 
 main();
