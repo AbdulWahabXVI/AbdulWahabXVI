@@ -15,14 +15,12 @@
   
 ## Languages
 
-[![GitHub Streak](https://streak-stats.demolab.com/?user=DenverCoder1&theme=radical)](https://git.io/streak-stats)
+![GitHub Streak](https://streak-stats.demolab.com/?user=DenverCoder1&theme=radical)
 
-<a href="https://github.com/anuraghazra/github-readme-stats">
-  <img 
-    alt="Top Languages Card" 
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=AbdulWahabXVI&layout=compact"
-  />
-</a>
+![Pranesh's GitHub stats](https://github-readme-stats-fast.vercel.app/api?username=AbdulWahabXVI&show_icons=true&theme=radical&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
+
+
+
 ---
 
 <div align="center">
