@@ -2,8 +2,6 @@
   
 ## Abdul Wahab
 
-<a href="instagram.com/abdulwahabxvi" img="">
-  
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -29,12 +27,10 @@
 <div align="center">
   
 ## Connect with Me
-[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/6ME9TDt)
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/technologyhell)
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/technologyhell)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/nitishsinghslg)
-[![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/technologyhell)
-[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@technologyhell) 
+[![Discord](https://img.shields.io/badge/Discord-111?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/6ME9TDt)
+[![Instagram](https://img.shields.io/badge/Facebook-111?style=for-the-badge&logo=facebook&logoColor=white)](https://instagram.com/technologyhell)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-111?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/abdulwahabxvi)
+[![X](https://img.shields.io/badge/X-111?style=for-the-badge&logo=x&logoColor=white)](https://x.com/technologyhell)
 </div>
 
 <div align="center">
