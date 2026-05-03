@@ -3,46 +3,19 @@ const fs = require("fs");
 
 const USERNAME = process.env.GITHUB_USERNAME;
 
-/* ---------- CONFIG ---------- */
-
-const COLORS = {
-  JavaScript: "#f1e05a",
-  Python: "#3572A5",
-  Cpp: "#f34b7d",
-  Java: "#b07219",
-  HTML: "#e34c26",
-  CSS: "#563d7c",
-  TypeScript: "#3178c6"
-};
-
-const ICONS = {
-  JavaScript:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/javascript/javascript-original.svg",
-  Python:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/python/python-original.svg",
-  Cpp:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/cplusplus/cplusplus-original.svg",
-  Java:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/java/java-original.svg",
-  HTML:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/html/html-original.svg",
-  CSS:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/css/css-original.svg",
-  TypeScript:
-    "https://raw.githubusercontent.com/offensive-vk/Icons/master/typescript/typescript-original.svg"
-};
-
-/* ---------- NORMALIZE ---------- */
-
-function normalize(lang) {
-  const map = {
-    "C++": "Cpp",
-    "C#": "Csharp"
-  };
-  return map[lang] || lang;
+function badge(lang, color) {
+  const label = encodeURIComponent(lang);
+  return `https://img.shields.io/badge/${label}-${color}?style=flat-square`;
 }
 
-/* ---------- FETCH ---------- */
+const COLORS = {
+  JavaScript: "f1e05a",
+  Python: "3572A5",
+  HTML: "e34c26",
+  CSS: "563d7c",
+  Cpp: "f34b7d",
+  TypeScript: "3178c6"
+};
 
 async function getRepos() {
   const res = await axios.get(
@@ -56,20 +29,16 @@ async function getLang(url) {
   return res.data;
 }
 
-/* ---------- MAIN ---------- */
-
 async function main() {
   const repos = await getRepos();
 
   const totals = {};
 
   for (const repo of repos) {
-    if (!repo.languages_url) continue;
-
     const langs = await getLang(repo.languages_url);
 
     for (const [lang, val] of Object.entries(langs)) {
-      const key = normalize(lang);
+      const key = lang.replace("C++", "Cpp");
       totals[key] = (totals[key] || 0) + val;
     }
   }
@@ -78,60 +47,28 @@ async function main() {
     .sort((a, b) => b[1] - a[1])
     .slice(0, 6);
 
-  const max = sorted[0]?.[1] || 1;
+  const max = sorted[0][1];
 
-  let svg = "";
+  let output = `## 📊 Languages\n\n<p>\n`;
 
-  sorted.forEach(([lang, val], i) => {
-    const width = (val / max) * 240;
+  sorted.forEach(([lang, val]) => {
+    const pct = Math.round((val / max) * 100);
+    const color = COLORS[lang] || "888888";
 
-    svg += `
-<g transform="translate(0,${i * 32})">
+    output += `
+<img src="${badge(lang, color)}" />
 
-  <!-- icon -->
-  <image href="${ICONS[lang] || ""}"
-         x="10" y="10"
-         width="16" height="16"
-         style="pointer-events:none;" />
+<span style="display:inline-block;width:200px;height:6px;background:#1f2937;border-radius:999px;">
+  <span style="display:block;width:${pct}%;height:100%;background:#${color};border-radius:999px;"></span>
+</span>
 
-  <!-- name -->
-  <text x="35" y="22"
-        fill="#e5e7eb"
-        font-size="12">
-    ${lang}
-  </text>
-
-  <!-- background -->
-  <rect x="120" y="12"
-        width="240" height="6"
-        rx="3"
-        fill="#1f2937" />
-
-  <!-- fill -->
-  <rect x="120" y="12"
-        width="${width}"
-        height="6"
-        rx="3"
-        fill="${COLORS[lang] || "#888"}" />
-
-</g>
+<br/>
 `;
   });
 
-  const finalSVG = `
-<svg width="420" height="220" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#0b0f19"/>
+  output += `\n</p>\n`;
 
-  <text x="10" y="20" fill="#9ca3af" font-size="12">
-    Languages I use
-  </text>
-
-  ${svg}
-</svg>
-`;
-
-  fs.mkdirSync("output", { recursive: true });
-  fs.writeFileSync("output/lang.svg", finalSVG);
+  fs.writeFileSync("README.md", output);
 }
 
 main();
