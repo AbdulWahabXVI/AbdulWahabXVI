@@ -1,0 +1,56 @@
+
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#0d1117"/>
+  
+      <rect x="20"
+            y="50"
+            width="130"
+            height="300"
+            fill="#00ffaa" />
+      <text x="20"
+            y="380"
+            font-size="12"
+            fill="white">HTML</text>
+    
+      <rect x="180"
+            y="87.96026556307123"
+            width="130"
+            height="262.03973443692877"
+            fill="#00ffaa" />
+      <text x="180"
+            y="380"
+            font-size="12"
+            fill="white">JavaScript</text>
+    
+      <rect x="340"
+            y="201.93358422625374"
+            width="130"
+            height="148.06641577374626"
+            fill="#00ffaa" />
+      <text x="340"
+            y="380"
+            font-size="12"
+            fill="white">CSS</text>
+    
+      <rect x="500"
+            y="274.79838961753416"
+            width="130"
+            height="75.20161038246584"
+            fill="#00ffaa" />
+      <text x="500"
+            y="380"
+            font-size="12"
+            fill="white">C++</text>
+    
+      <rect x="660"
+            y="348.6859379102537"
+            width="130"
+            height="1.3140620897463147"
+            fill="#00ffaa" />
+      <text x="660"
+            y="380"
+            font-size="12"
+            fill="white">Handlebars</text>
+    
+</svg>
+  

@@ -1,0 +1,145 @@
+
+<svg width="420" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#0b0f19"/>
+  
+    <g transform="translate(0,0)">
+
+      <!-- icon -->
+      <image href="https://raw.githubusercontent.com/offensive-vk/Icons/master/html/html-line.svg"
+             x="10" y="10"
+             width="16" height="16" />
+
+      <!-- name -->
+      <text x="35" y="22"
+            fill="#e5e7eb"
+            font-size="12">
+        HTML
+      </text>
+
+      <!-- background bar -->
+      <rect x="120" y="12"
+            width="260" height="8"
+            rx="4"
+            fill="#1f2937" />
+
+      <!-- value bar -->
+      <rect x="120" y="12"
+            width="260"
+            height="8"
+            rx="4"
+            fill="#e34c26" />
+
+    </g>
+    <g transform="translate(0,30)">
+
+      <!-- icon -->
+      <image href="https://raw.githubusercontent.com/offensive-vk/Icons/master/javascript/javascript-line.svg"
+             x="10" y="10"
+             width="16" height="16" />
+
+      <!-- name -->
+      <text x="35" y="22"
+            fill="#e5e7eb"
+            font-size="12">
+        JavaScript
+      </text>
+
+      <!-- background bar -->
+      <rect x="120" y="12"
+            width="260" height="8"
+            rx="4"
+            fill="#1f2937" />
+
+      <!-- value bar -->
+      <rect x="120" y="12"
+            width="227.91487978394866"
+            height="8"
+            rx="4"
+            fill="#f1e05a" />
+
+    </g>
+    <g transform="translate(0,60)">
+
+      <!-- icon -->
+      <image href="https://raw.githubusercontent.com/offensive-vk/Icons/master/css/css-line.svg"
+             x="10" y="10"
+             width="16" height="16" />
+
+      <!-- name -->
+      <text x="35" y="22"
+            fill="#e5e7eb"
+            font-size="12">
+        CSS
+      </text>
+
+      <!-- background bar -->
+      <rect x="120" y="12"
+            width="260" height="8"
+            rx="4"
+            fill="#1f2937" />
+
+      <!-- value bar -->
+      <rect x="120" y="12"
+            width="128.32422700391342"
+            height="8"
+            rx="4"
+            fill="#563d7c" />
+
+    </g>
+    <g transform="translate(0,90)">
+
+      <!-- icon -->
+      <image href=""
+             x="10" y="10"
+             width="16" height="16" />
+
+      <!-- name -->
+      <text x="35" y="22"
+            fill="#e5e7eb"
+            font-size="12">
+        C++
+      </text>
+
+      <!-- background bar -->
+      <rect x="120" y="12"
+            width="260" height="8"
+            rx="4"
+            fill="#1f2937" />
+
+      <!-- value bar -->
+      <rect x="120" y="12"
+            width="65.17472899813706"
+            height="8"
+            rx="4"
+            fill="#888" />
+
+    </g>
+    <g transform="translate(0,120)">
+
+      <!-- icon -->
+      <image href=""
+             x="10" y="10"
+             width="16" height="16" />
+
+      <!-- name -->
+      <text x="35" y="22"
+            fill="#e5e7eb"
+            font-size="12">
+        Handlebars
+      </text>
+
+      <!-- background bar -->
+      <rect x="120" y="12"
+            width="260" height="8"
+            rx="4"
+            fill="#1f2937" />
+
+      <!-- value bar -->
+      <rect x="120" y="12"
+            width="1.1388538111134727"
+            height="8"
+            rx="4"
+            fill="#888" />
+
+    </g>
+</svg>
